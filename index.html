@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8"/>
+	<title>Musicoterapia</title>
+	<meta name="description" content="Musicoterapia"/>	
+	<meta name="keywords" content="Musicoterapia musicoterapia arte talleres sesiones">	
+	<meta name="viewport" content="width=device-width,initial-scale=1"/>
+	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+	<link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml"/>
+	<link rel="stylesheet" href="css/estilos.css" type="text/css" media="screen" > 
+    <link rel="stylesheet" href="css/flexslider.css" />	
+	<link rel="stylesheet" href="css/jquery.fancybox.css" />
+    <link rel="stylesheet" href="css/social-barr.css" type="text/css" media="screen" >
+    <link rel="stylesheet" href="css/flexslider.css" />  <!-- Link css para la flexibilidad del banner -->	
+    <link rel="stylesheet" href="css/galeria-imagenes.css" /> 
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script>
+		!window.jQuery && document.write("<script src='js/jquery.min.js'><\/script>");
+	</script>
+
+</head>
+<body>
+
+<!--  
+    <div class="menu-reducido">
+    <a href="#" class="bt-menu"> <img id="img-menu-reducido" src="img/menu-barritas.png" alt="barritas"></a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                
+    <img id="logo-sitio-web" src="img/sitio-logo.png" alt="logo" />	
+</div>
+-->
+
+<div class="menu-reducido">
+    <a href="#" class="bt-menu"> <img id="img-menu-reducido" src="img/menu-barritas.png" alt="barritas" style="cursor: pointer; padding: 0.3em;"> </a>
+                
+    <!-- <img id="logo-sitio-web" src="img/sitio-logo.png" alt="logo" />	 -->
+    <a href="#" style="font-family: 'Pecita', Helvetica, Verdana; color: rgb(204, 112, 50); font-size: 1.5em; padding: 2em;"> Musicoterapia </a>
+</div>
+    
+<header class="opciones-menu-reducido">
+    <nav>
+        <ul>
+            <li><a href="#" link="#inicio">Presentación</a></li>
+            <li><a href="#" link="#beneficios">Beneficios</a></li>
+            <li><a href="#" link="#contacto">Contacto</a></li>	
+        </ul>
+    </nav>
+</header>	
+        
+    
+<header id="menu-grande">
+    <h1 class="logo-sitio-web">
+        <!-- <img src="img/sitio-logo.png" alt="logo" />   -->
+
+        <p style="font-family: 'Pecita', Helvetica, Verdana; color: rgb(204, 112, 50); padding: 0.5em;"> Musicoterapia </p>
+
+        <!-- font-family: 'Brush Script MT', cursive; -->
+
+    </h1> 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <nav>
+        <ul>
+            <li><a href="#" link="#inicio">Presentación</a></li>
+            <li><a href="#" link="#beneficios">Beneficios</a></li>
+            <li><a href="#" link="#contacto">Contacto</a></li>	
+        </ul>
+    </nav>
+
+</header>
+
+<!-- ============================================================================= -->
+
+<div style="display: none" id="loading-spinner"></div>
+
+<contenido-app></contenido-app>
+
+<!-- ============================================================================= -->
+
+<!-- 
+<div class="social">  
+	<ul>
+		<li><a href="https://www.facebook.com/aasas" target="_blank" class="icon-facebook2"></a></li>
+		<li><a href="http://www.twitter.com" target="_blank" class="icon-twitter"></a></li>
+		<li><a href="http://www.googleplus.com" target="_blank" class="icon-google-plus"></a></li>
+	</ul>
+</div> 
+-->
+
+<script src="cargaComponentes.js" type="module"></script>  
+
+<script src="js/jquery.flexslider.js"></script>
+<script src="js/jquery.mousewheel-3.0.6.pack.js"></script>
+<script src="js/jquery.fancybox.js"></script>
+
+  
+<script> 
+
+    var estaAbiertoMenuReducido = false;
+
+    window.addEventListener("click", (evento) =>
+	{   
+        if (evento.target.id == "img-menu-reducido") 
+        {
+            if (! estaAbiertoMenuReducido) {
+                $("nav").animate({ left: "0" });  // Abre el menu reducido
+                estaAbiertoMenuReducido = true;
+            } 
+            else {
+                $("nav").animate({ left: "-100%" });  // Cierra el menu reducido
+                estaAbiertoMenuReducido = false;
+            }
+        }
+        else
+        {
+            if (estaAbiertoMenuReducido) {
+                $("nav").animate({ left: "-100%" });  // Cierra el menu reducido
+                estaAbiertoMenuReducido = false;
+            }
+        }
+	});
+
+
+    //====================================================>>>>>>
+
+    /*
+    // Mostramos y ocultamos submenus
+    $(".submenu").click(function() {           			// SI EL USUARIO CLICA EL MENU REDUCIDO..LAS OPCIONES SE CIERRAN
+        $(this).children(".children").slideToggle();
+    });
+    */
+   
+    //====================================================>>>>>>
+
+    //fancybox
+    /*$("a[rel=trabajos]").fancybox({
+        "transitionIn":"fade",
+        "transitionOut":"elastic",
+        "titlePosition":"over",
+        "titleFormat":function(title, currentArray, currentIndex, currentOpts){
+            return "<span id='fancybox-title-over'>Trabajo "+(currentIndex+1)+" de "+currentArray.length +(title.length?" &nbsp; "+title:"")+"</span>";
+        }
+    });*/
+    $(".fade").fancybox();
+    //====================================================>>>>>>
+
+</script>
+	
+</body>
+</html>
+
+
