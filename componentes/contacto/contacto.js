@@ -26,7 +26,7 @@ export class Contacto extends CargaVista
     guardarUrlEnPortapapeles() 
     {
         var aux = document.createElement("input");
-        aux.setAttribute("value", "https://musicoterapia.github.io/");
+        aux.setAttribute("value", "musicoterapia.github.io");
         document.body.appendChild(aux);
         aux.select();
         document.execCommand("copy");
