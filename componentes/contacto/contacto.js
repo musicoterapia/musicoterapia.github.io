@@ -20,32 +20,17 @@ export class Contacto extends CargaVista
 
     cargarVista()
     {
-        var texto = `
-        <section class="camada_principal">
+        this.cargarHtml({ rutaArchivo: "contacto/index.html" });
+    }
 
-            <br/><br/><br/>
-
-            <div id="camada_contenido">
-                <div id="content">
-                    
-                    <fieldset style=" background: lightblue; padding: 1em; text-align: left;">
-                       
-                        <b> Nombre: </b> <span> Daniela Aravena Carroza </span> <br/><br/>
-                        <b> Ciudad: </b> <span> Viña del Mar </span> <br/><br/>	
-                        <b> Profesión: </b> <span> Musicoterapeuta - Escuela Europea Des Arts </span> <br/><br/>		
-                        <b> Email: </b> <span> frahnnyaravena@gmail.com </span> <br/><br/>	
-
-                        <br/><br/>
-                        <h2> Clases particulares de Musicoterapia infantil (online) </h2>
-
-                    </fieldset>
-                </div>
-            </div>  <br/><br/>
-
-        </section>  
-        `;
-
-        this.cargarHtml({ textoHtml: texto });    
+    guardarUrlEnPortapapeles() 
+    {
+        var aux = document.createElement("input");
+        aux.setAttribute("value", "https://musicoterapia.github.io/");
+        document.body.appendChild(aux);
+        aux.select();
+        document.execCommand("copy");
+        document.body.removeChild(aux);
     }
 };
 

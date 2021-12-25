@@ -196,6 +196,57 @@ nav a:hover {
 #content img{ width: 130px; height: 160px; }   /* Tamaño de las miniaturas de las imagenes, para que no se descuadren */
 
 /*==================================================================================================*/
+/* Botones */
+/*
+.boton-naranja {
+	background:#cf971d;
+	color:#ffffff;
+	font-size:15px;
+	padding:8px 12px;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	text-decoration:none;
+	display: block; 
+}
+
+.boton-celeste {
+	background: rgb(68, 100, 119);
+	color:#ffffff;
+	font-size:15px;
+	padding:8px 12px;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	text-decoration:none;
+	display: block;
+}
+
+.boton-verde {
+	background: rgb(68, 119, 85);
+	color:#ffffff;
+	font-size:15px;
+	padding:8px 12px;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	text-decoration:none;
+	display: block; 
+}
+
+.boton-rojo {
+	background: rgb(180, 88, 46);
+	color:#ffffff;
+	font-size:15px;
+	padding:8px 12px;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	text-decoration:none;
+	display: block; 
+}
+*/
+/*==================================================================================================*/
 	/* Esta clase es para que el logo de bextan se ponga un poquito transparente al pasar el mouse */
 	
 .logo-sitio-web
@@ -306,7 +357,7 @@ main
 	background-color: #EEE;
 }
 
-.course-list li:hover {	background-color: #555; }
+.course-list li:hover {	background-color: rgb(228, 224, 224); }
 
 .course-list a
 {
@@ -482,3 +533,5 @@ main
    
  
 /*===========================================================>>>>>*/
+
+@media (min-width: 668px) { .compartir-por-whatsapp { display: none } }
